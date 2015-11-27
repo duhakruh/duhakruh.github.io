@@ -1,0 +1,64 @@
+<!--declaration defines the document type to be HTML5-->
+<!DOCTYPE html>
+
+<!--The text between <html> and </html> describes an HTML document-->
+<html>
+    
+    <!--provides information about the document-->
+    <head>
+        <!--provides a title for the document-->
+        <title>Page Title</title>
+        
+        <!-- zajišťuje správnou češtinu na stránce -->
+        <meta charset="UTF-8">
+        
+        <!--font z Google, lekce 14, lekce 15 degradování k dostupnému fontu-->
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        
+        <!--lekce 8-->
+        <style>
+            /*CSS selector lekce 9 ,  pozor jiný způsob komentáře*/
+            h1 {
+                color: green;
+            }
+        
+            /*CSS class lekce 10*/
+            .red-text {
+                color: red;
+            }
+            
+            .size-text {
+                /*Font size of an Element lekce 12*/
+                font-size: 30px;
+            }
+            
+            /*Font Family of an Element , lekce 13 , lekce 14, lekce 15*/
+            .font-text {
+                font-family: Lobster, Sans-serif;
+            }
+        </style>
+        
+    </head>
+    
+    
+    <!--describes the visible page content-->
+    <body>
+    
+        <!--HTML element párový , opening tag, closing tag - lekce 1-->
+        <!--describes a heading - lekce 2  --> 
+        <h1>Heading 1</h1>
+        <!--lekce 8-->
+        <h2 style="color: blue">Heading 2</h2>
+        <h3>Heading 3</h3>
+        <!--Style Multiple Elements with a CSS Class  , lekce 11-->
+        <h4 class="red-text">Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        
+        <!--describes a paragraph - lekce 3, lekce 6 -->
+        <p class="red-text size-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam in lorem sit amet leo accumsan lacinia. Nulla non arcu lacinia neque faucibus fringilla. Nullam at arcu a est sollicitudin euismod. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Suspendisse nisl. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Aliquam erat volutpat. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Praesent vitae arcu tempor neque lacinia pretium. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. In dapibus augue non sapien. Etiam dictum tincidunt diam. Mauris tincidunt sem sed arcu. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus.</p>
+        
+        <p class="font-text">Příliš žluťoučký kůň úpěl ďábelské ódy.</p>
+    
+    </body>
+</html>
