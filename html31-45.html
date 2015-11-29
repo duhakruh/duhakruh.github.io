@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML 30-45</title>
+        <meta charset="UTF-8">
+        
+        <style type="text/css">
+            .green-background {
+                background-color: green;
+            }
+            #red-background-id {
+                background-color: red;
+            }    
+            .box {
+                border-style: solid;
+                border-color: black;
+                border-width: 5px;
+                text-align: center;
+            }
+            .yellow-box {
+                background-color: yellow;
+                padding: 20px;
+            }
+            .red-box {
+                background-color: red;
+                margin: 30px;
+            }
+            .green-box {
+                background-color: green;
+                padding-top: 10px;
+                padding-right: 20px;
+                padding-bottom: 90px;
+                padding-left: 400px;
+            }
+          .blue-box {
+              background-color:blue;
+              margin-top: 40px;
+              margin-right: 20px;
+              margin-bottom: 60px;
+              margin-left: 70px;
+          }
+          .orange-box {
+            background-color: orange;
+            padding: 20px 80px 160px 10px;
+          }
+
+        </style>
+    </head>
+    <body>
+        <form action="zpracovani.html">
+            <input type="text" placeholder="napiš sem název hry" required><br><br>
+            
+            <div class="green-background">
+                <label><input type="radio" name="jazyk" checked>čeština</label><br>
+                <label><input type="radio" name="jazyk">angličtina</label><br>
+                <label><input type="radio" name="jazyk">němčina</label><br><br>
+                
+                <label id="red-background-id"><input type="checkbox" name="barva">red</label><br>
+                <label><input type="checkbox" name="barva" checked>white</label><br>
+                <label><input type="checkbox" name="barva">blue</label><br><br>
+            </div>
+            
+            <button type="submit">odešli data</button>
+        </form>
+        
+        <div class="box yellow-box">
+            yellow box
+            <div class="box red-box">
+              red box
+            </div>
+            <div class="box green-box">
+              green box
+            </div>
+            <div class="box blue-box">
+              blue box
+            </div>
+            <div class="box orange-box">
+              orange box
+            </div>
+        </div>
+    </body>
+</html>
