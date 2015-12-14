@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--The text between <html> and </html> describes an HTML document-->
+<html>
+    
+    <!--provides information about the document-->
+    <head>
+        <!--provides a title for the document-->
+        <title>Bootstrap</title>
+        
+        <!-- zajišťuje správnou češtinu na stránce -->
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        
+        <style>
+            .imagesize {
+                width: 500px;
+                /*height: 150px;*/
+            }
+            
+            /*http://www.w3schools.com/cssref/pr_border.asp*/
+            .thin-green-border {
+                border-color: green;
+                border-width: 5px;
+                border-style: solid;
+                border-radius: 30px;
+            }
+            
+            .thin-green-border-circle {
+                border-color: green;
+                border-width: 5px;
+                border-style: solid;
+                border-radius: 50%;
+            }
+            
+            .thin-green-border-circle-dot {
+                border-color: green;
+                border-width: 5px;
+                border-style: dotted;
+                border-radius: 50%;
+            }
+
+        </style>
+    </head>
+    
+    
+    <!--describes the visible page content-->
+    <body>
+        <div class="container-fluid">
+            <p class="text-center">vycentrovaný text</p>
+        
+            <img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border img-responsive" alt="to je orel">
+            <img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border-circle img-responsive" alt="to je orel">
+            
+            <p>Zde je samostatná práce <a href="https://duhaprg01-milangit.c9users.io/html1-10.html">číslo 1</a>.</p>
+            <p>toto je <a href=#>slepý link</a></p>
+            
+            <a href="https://en.wikipedia.org/wiki/Eagle"><img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border-circle-dot img-responsive" alt="to je orel"></a>
+            
+            <div class="text-center">
+                <ul>
+                    <li>kočka</li>
+                    <li>pes</li>
+                    <li>myš</li>
+                </ul>
+            </div>
+            
+            <ol>
+                <li>LightBot</li>
+                <li>Tynker</li>
+                <li>Code Avengers</li>
+            </ol>
+            
+            <form action="zpracovani.html">
+                <input type="text" placeholder="napiš sem název hry">
+            </form>
+        </div>
+    </body>
+</html>
