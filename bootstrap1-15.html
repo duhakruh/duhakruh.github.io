@@ -10,11 +10,17 @@
         <!-- zajišťuje správnou češtinu na stránce -->
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
         
         <style>
             .imagesize {
                 width: 500px;
                 /*height: 150px;*/
+            }
+            
+            body {
+                background-color: #ffe873;
             }
             
             /*http://www.w3schools.com/cssref/pr_border.asp*/
@@ -49,22 +55,21 @@
             <p class="text-center">vycentrovaný text</p>
             <button type="submit" class="btn">Like</button>
             <div class="row">
-                <div class="col-xs-4"><button type="submit" class="btn btn-block btn-primary">block-level button element</button></div>
-                <div class="col-xs-4"><button type="submit" class="btn btn-block btn-info">info</button></div>
-                <div class="col-xs-4"><button type="submit" class="btn btn-block btn-danger">delete</button></div>
+                <div class="col-xs-4"><button type="submit" class="btn btn-block btn-primary glyphicon glyphicon-thumbs-up"> block-level button <span class="btn-danger">element</span></button></div>
+                <div class="col-xs-4"><button type="submit" class="btn btn-block btn-info glyphicon glyphicon-info-sign"> info</button></div>
+                <div class="col-xs-4"><button type="submit" class="btn btn-block btn-danger glyphicon glyphicon-trash"> delete</button></div>
             </div>
-        
-            <img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border img-responsive" alt="to je orel">
-            <img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border-circle img-responsive" alt="to je orel">
+
+            <div class="row">
+                <div class="col-xs-4"><img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border img-responsive" alt="to je orel"></div>
+                <div class="col-xs-4"><img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border-circle img-responsive" alt="to je orel"></div>
+                <div class="col-xs-4"><a href="https://en.wikipedia.org/wiki/Eagle"><img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border-circle-dot img-responsive" alt="to je orel"></a></div>
+            </div>        
             
-            <a href="https://en.wikipedia.org/wiki/Eagle"><img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border-circle-dot img-responsive" alt="to je orel"></a>
-            
-            <div class="text-primary">
-                <ul>
-                    <li>kočka</li>
-                    <li>pes</li>
-                    <li>myš</li>
-                </ul>
+            <div class="row text-primary">
+                <div class="col-xs-4"><label><input type="radio" name="animal" checked>kočka</label></div>
+                <div class="col-xs-4"><label><input type="radio" name="animal">pes</label></div>
+                <div class="col-xs-4"><label><input type="radio" name="animal">myš</label><br></div>
             </div>
             
             <ol>
