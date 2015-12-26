@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--The text between <html> and </html> describes an HTML document-->
+<html>
+    
+    <!--provides information about the document-->
+    <head>
+        <!--provides a title for the document-->
+        <title>Bootstrap 16-31</title>
+        
+        <!-- zajišťuje správnou češtinu na stránce -->
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        
+        <style>
+            .imagesize {
+                width: 500px;
+                /*height: 150px;*/
+            }
+            
+            body {
+                background-color: #ffe873;
+            }
+            
+            /*http://www.w3schools.com/cssref/pr_border.asp*/
+            .thin-green-border {
+                border-color: green;
+                border-width: 5px;
+                border-style: solid;
+                border-radius: 30px;
+            }
+            
+            .thin-green-border-circle {
+                border-color: green;
+                border-width: 5px;
+                border-style: solid;
+                border-radius: 50%;
+            }
+            
+            .thin-green-border-circle-dot {
+                border-color: green;
+                border-width: 5px;
+                border-style: dotted;
+                border-radius: 50%;
+            }
+
+        </style>
+    </head>
+    
+    
+    <!--describes the visible page content-->
+    <body>
+        <div class="container-fluid">
+            <p class="text-center">vycentrovaný text</p>
+            <button type="submit" class="btn">Like</button>
+            <div class="row">
+                <div class="col-xs-4"><button type="submit" class="btn btn-block btn-primary glyphicon glyphicon-thumbs-up"> block-level button <span class="btn-danger">element</span></button></div>
+                <div class="col-xs-4"><button type="submit" class="btn btn-block btn-info glyphicon glyphicon-info-sign"> info</button></div>
+                <div class="col-xs-4"><button type="submit" class="btn btn-block btn-danger glyphicon glyphicon-trash"> delete</button></div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-4"><img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border img-responsive" alt="to je orel"></div>
+                <div class="col-xs-4"><img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border-circle img-responsive" alt="to je orel"></div>
+                <div class="col-xs-4"><a href="https://en.wikipedia.org/wiki/Eagle"><img src="http://cdn1.pri.org/sites/default/files/story/images/BaldEagle.jpg" class="imagesize thin-red-border thin-green-border-circle-dot img-responsive" alt="to je orel"></a></div>
+            </div>        
+            
+            <div class="row text-primary">
+                <div class="col-xs-4"><label><input type="radio" name="animal" checked>kočka</label></div>
+                <div class="col-xs-4"><label><input type="radio" name="animal">pes</label></div>
+                <div class="col-xs-4"><label><input type="radio" name="animal">myš</label><br></div>
+            </div>
+            
+            <div class="row text-primary">
+                <div class="col-xs-4"><label><input type="checkbox" name="animal" checked>LightBot</label></div>
+                <div class="col-xs-4"><label><input type="checkbox" name="animal">Tynker</label></div>
+                <div class="col-xs-4"><label><input type="checkbox" name="animal">Code Avengers</label><br></div>
+            </div>
+            
+            <form action="zpracovani.html">
+                <div class="row">
+                <div class="col-xs-7"><input type="text" placeholder="napiš sem název hry"></div>
+                <div class="col-xs-5"><button class = "btn btn-primary" type="submit"><i class="fa fa-paper-plane">Submit</i></button></div>
+                </div>
+            </form>
+            
+            <div class="container-fluid">
+                <h3 class="text-primary text-center">jQuery Playground</h3>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="well">
+                            <button type="submit"></button>
+                            <button type="submit"></button>
+                            <button type="submit"></button>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="well">
+                            <button type="submit"></button>
+                            <button type="submit"></button>
+                            <button type="submit"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
