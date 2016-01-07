@@ -12,19 +12,39 @@
         <canvas id="myCanvas" width="480" height="320"></canvas>
         
         <script>
-            //https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+            //https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over
         	var canvas = document.getElementById("myCanvas");
             var ctx = canvas.getContext("2d"); //uložíme si 2D vykreslovací nástroj, kterým budeme kreslit.
             
-            var x = canvas.width/2;
+            var x = canvas.width/2+60;
             var y = canvas.height-30;
             var dx = -2;
             var dy = -2;
+            var ballRadius = 10;
+            
+            var paddleHeight = 10;
+            var paddleWidth = 35;
+            var paddleX = (canvas.width-paddleWidth)/2;
+            
+            var rightPressed = false;
+            var leftPressed = false;
+            
+            var ballColor = returnRandomColor();
             
             function drawBall()
             {
                 ctx.beginPath();
-                ctx.arc(x, y, 10, 0, Math.PI*2);
+                ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+                //ctx.fillStyle = "#0095DD";
+                ctx.fillStyle = ballColor;
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawPaddle()
+            {
+                ctx.beginPath();
+                ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
                 ctx.fillStyle = "#0095DD";
                 ctx.fill();
                 ctx.closePath();
@@ -34,11 +54,66 @@
             {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 drawBall();
+                drawPaddle();
+                
                 x += dx;
                 y += dy;
+                
+                
+                if(x + dx > canvas.width - ballRadius || x + dx < ballRadius)
+                {
+                    dx = -dx;
+                    ballColor = returnRandomColor();
+                }
+                
+                if(y + dy > canvas.height - ballRadius || y + dy < ballRadius)
+                {
+                   dy = -dy;
+                   ballColor = returnRandomColor();
+                }
+                
+                if(rightPressed && paddleX < canvas.width-paddleWidth)
+                {
+                    paddleX += 1;
+                }
+                else if(leftPressed && paddleX > 0)
+                {
+                    paddleX -= 1;
+                }
             }
             
-            setInterval(draw, 5);
+            function returnRandomColor()
+            {
+                var r = Math.floor(Math.random() * 255);
+                var g = Math.floor(Math.random() * 255);
+                var b = Math.floor(Math.random() * 255);
+                
+                return "rgba(" + r.toString() + "," + g.toString() + "," + b.toString()  + ", 1)";
+            }
+            
+            function keyDownHandler(e)
+            {
+                if(e.keyCode == 39) {
+                    rightPressed = true;
+                }
+                else if(e.keyCode == 37) {
+                    leftPressed = true;
+                }
+            }
+
+            function keyUpHandler(e)
+            {
+                if(e.keyCode == 39) {
+                    rightPressed = false;
+                }
+                else if(e.keyCode == 37) {
+                    leftPressed = false;
+                }
+            }
+            
+            document.addEventListener("keydown", keyDownHandler, false);
+            document.addEventListener("keyup", keyUpHandler, false);
+            setInterval(draw, 10);
         </script>
     </body>
 </html>
