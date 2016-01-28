@@ -57,6 +57,12 @@
             var deleni1 = 4;
             deleni1 /= 3;
             
+            console.log(zbytekPoDeleni);
+            console.log(plus1);
+            console.log(minus1);
+            console.log(nasobeni1);
+            console.log(deleni1);
+            
             function pricti5(cislo)
             {
                 return cislo + 5;
@@ -64,6 +70,71 @@
             
             var esc1 = "ahoj \"kuk\'";
             console.log(esc1);
+            
+            var tag = "<a href='http://www.example.com' target='_blank'>Link</a>";
+            console.log(tag);
+            
+            var escSeq = "\\ \t \n ahoj";
+            console.log(escSeq);
+            
+            var joinStrings = "Milan " + "Bartoň";
+            console.log(joinStrings);
+            
+            var addString = "Milan ";
+            addString += "Bartoň";
+            console.log(addString);
+            
+            var jmeno = "Milan ";
+            var prijmeni = "Bartoň"
+            var celeJmeno = jmeno + prijmeni;
+            console.log(celeJmeno); // 42
+            
+            console.log(celeJmeno.length); // 43
+            
+            console.log(celeJmeno[0]); // 44
+            
+            console.log(celeJmeno[2]); // 45
+            
+            console.log(celeJmeno[celeJmeno.length-1]); // 46
+            
+            console.log(celeJmeno[celeJmeno.length-4]); // 47
+            
+            var pole = ["ahoj", 2];
+            console.log(pole);
+            
+            var pole1 = [pole, "ahoj", 2];
+            console.log(pole1);
+            
+            console.log(pole1[1]); //50
+            
+            pole1[1] = "zdar";
+            console.log(pole1[1]); //51
+            
+            
+            var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+            console.log(myArray[3][0][2]); //52
+            
+            var pushArray = [1,2,3];
+            console.log(pushArray);
+            pushArray.push(4);
+            console.log(pushArray);
+            
+            
+            console.log(pushArray.pop());
+            
+            console.log(pushArray.shift());
+            
+            
+            console.log(pushArray);
+            pushArray.unshift("nový prvek");
+            console.log(pushArray);
+            
+            function tiskni()
+            {
+                console.log("ahoj");
+                console.log("Pavle");
+            }
+            tiskni();//57
             
             
         </script>
