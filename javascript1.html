@@ -275,10 +275,167 @@
                 console.log("hodnota není 2 ani 3");
             }
             
+            //77
+            var prom77 = 18;
+            if (prom77 < 5)
+                console.log("Tiny");
+            else if (prom77 < 10)
+                console.log("Small");
+            else if (prom77 < 15)
+                console.log("Medium");
+            else if (prom77 < 20)
+                console.log("Large");
+            else
+                console.log("Huge");
+                
+                
+            //78
+            var prom78 = 9;
+            switch (prom78)
+            {
+                case 1:
+                    console.log("little");
+                    break;
+                case 2:
+                    console.log("middle");
+                    break;
+                default:
+                    console.log("big")
+            }
+            
+            //79
+            function fce79(prom)
+            {
+                if (prom > 0)
+                    return true;
+                else if (prom < 0)
+                    return false;
+                else
+                    return undefined;
+            }
+            console.log(fce79(0));
+            
+            //80
+            var pes = {
+                "jmeno": "Pesan",
+                "barva": "hnědá",
+                "vaha": 25,
+                "potomci": ["Alik","Punta"]
+            }
+            console.log(pes);
+            
+            //81
+            console.log(pes.jmeno);
+            
+            //82
+            console.log(pes["barva"]);
+            
+            //83
+            var prom83 = "vaha";
+            console.log("vaha je " + pes[prom83])
+            
+            //84
+            pes.vaha = 30;
+            
+            //85
+            pes.otec = "Azor";
+            
+            //86
+            delete pes.barva;
+            
+            //87
+            console.log(pes.hasOwnProperty("jmeno"));
+            
+            //88
+            var myMusic = [
+              {
+                "artist": "Billy Joel",
+                "title": "Piano Man",
+                "release_year": 1973,
+                "formats": [ 
+                  "CS", 
+                  "8T", 
+                  "LP" ],
+                "gold": true
+              },
+              {
+                "artist": "Billy Joel",
+                "title": "Piano Man",
+                "release_year": 1973,
+                "formats": [ 
+                  "CS", 
+                  "8T", 
+                  "LP" ],
+                "gold": true
+              }
+            ];
+            console.log(myMusic);
+            
+            //89
             
             
             
+            
+            var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["Javascript", "Gaming", "Foxes"]
+    }
+];
 
+
+function lookUp(firstName, prop){
+// Only change code below this line
+  for (var i = 0; i<contacts.length; i++)
+    {
+      if ((contacts[i].firstName == firstName) && (contacts[i].hasOwnProperty(prop)))
+        {
+          return contacts[i][prop];
+        }
+    }
+     for (var i = 0; i<contacts.length; i++)
+    {
+    
+      if (contacts[i].firstName != firstName)
+        {
+          return "No such contact";
+        }
+    }
+     for (var i = 0; i<contacts.length; i++)
+    {
+    if (!contacts[i].hasOwnProperty(prop))
+        {
+          return "No such property";
+        }
+      
+    }
+
+// Only change code above this line
+}
+
+console.log(lookUp("Akira", "likes"));
+console.log(lookUp("Kristian", "lastName"));
+            
             
             
             
