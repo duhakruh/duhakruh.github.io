@@ -372,70 +372,111 @@
             console.log(myMusic);
             
             //89
+            var prom89 = [-1];
+            for (var i=0;i<5;i++)
+            {
+                prom89.push(i);
+            }
+            console.log("ukol 89 " + prom89);
             
+            //90
+            while (prom89.length > 1)
+            {
+                prom89.pop();
+            }
+            console.log("ukol 90 " + prom89);
             
-            
-            
+            //91
             var contacts = [
-    {
-        "firstName": "Akira",
-        "lastName": "Laine",
-        "number": "0543236543",
-        "likes": ["Pizza", "Coding", "Brownie Points"]
-    },
-    {
-        "firstName": "Harry",
-        "lastName": "Potter",
-        "number": "0994372684",
-        "likes": ["Hogwarts", "Magic", "Hagrid"]
-    },
-    {
-        "firstName": "Sherlock",
-        "lastName": "Holmes",
-        "number": "0487345643",
-        "likes": ["Intriguing Cases", "Violin"]
-    },
-    {
-        "firstName": "Kristian",
-        "lastName": "Vos",
-        "number": "unknown",
-        "likes": ["Javascript", "Gaming", "Foxes"]
-    }
-];
+                {
+                    "firstName": "Akira",
+                    "lastName": "Laine",
+                    "number": "0543236543",
+                    "likes": ["Pizza", "Coding", "Brownie Points"]
+                },
+                {
+                    "firstName": "Harry",
+                    "lastName": "Potter",
+                    "number": "0994372684",
+                    "likes": ["Hogwarts", "Magic", "Hagrid"]
+                },
+                {
+                    "firstName": "Sherlock",
+                    "lastName": "Holmes",
+                    "number": "0487345643",
+                    "likes": ["Intriguing Cases", "Violin"]
+                },
+                {
+                    "firstName": "Kristian",
+                    "lastName": "Vos",
+                    "number": "unknown",
+                    "likes": ["Javascript", "Gaming", "Foxes"]
+                }
+            ];
 
 
-function lookUp(firstName, prop){
-// Only change code below this line
-  for (var i = 0; i<contacts.length; i++)
-    {
-      if ((contacts[i].firstName == firstName) && (contacts[i].hasOwnProperty(prop)))
-        {
-          return contacts[i][prop];
-        }
-    }
-     for (var i = 0; i<contacts.length; i++)
-    {
-    
-      if (contacts[i].firstName != firstName)
-        {
-          return "No such contact";
-        }
-    }
-     for (var i = 0; i<contacts.length; i++)
-    {
-    if (!contacts[i].hasOwnProperty(prop))
-        {
-          return "No such property";
-        }
-      
-    }
-
-// Only change code above this line
-}
-
-console.log(lookUp("Akira", "likes"));
-console.log(lookUp("Kristian", "lastName"));
+            function lookUp(firstName, prop)
+            {
+                for (var i = 0; i<contacts.length; i++)
+                {
+                    if (!contacts[i].hasOwnProperty(prop))
+                    {
+                      return "No such property";
+                    }
+                  
+                }
+                
+                for (var i = 0; i<contacts.length; i++)
+                {
+                    if ((contacts[i].firstName == firstName) && (contacts[i].hasOwnProperty(prop)))
+                    {
+                      return contacts[i][prop];
+                    }
+                }
+                
+                for (var i = 0; i<contacts.length; i++)
+                {
+                    if (contacts[i].firstName != firstName)
+                    {
+                      return "No such contact";
+                    }
+                }
+            }
             
+            console.log(lookUp("Akira", "likes"));
+            console.log(lookUp("Kristian", "lastName"));
+            
+            //92
+            var prom92 = Math.random();
+            console.log(prom92);
+            
+            //93
+            function vratCisloZintervalu(min1,max1)
+            {
+                return Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
+            }
+            console.log("nahodne cislo " + vratCisloZintervalu(3,4));
+            
+            //94
+            var prom94 = "1. Toto je 3. testovací věta z 25";
+            var regex94 = /to/gi;
+            var pocet94 = prom94.match(regex94).length;
+            console.log(pocet94);
+            
+            //95
+            var regex95 = /\d+/gi;
+            var pocet95 = prom94.match(regex95).length;
+            console.log(pocet95);
+            
+            //96
+            var regex96 = /\s+/gi;
+            var pocet96 = prom94.match(regex96).length;
+            console.log(pocet96);
+            
+            //97
+            var regex97 = /\S/gi;
+            var pocet97 = prom94.match(regex97).length;
+            console.log(pocet97);
             
             
             
