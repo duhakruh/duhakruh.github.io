@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Gamedev Canvas Workshop</title>
+        <style>
+        	* { padding: 0; margin: 0; }
+        	canvas {
+        	    background: #eee;
+        	    display: block; /*A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).*/
+        	    margin: 0 auto; /* zkrácenina 0 auto 0 auto, která způsobí vycentrování v CSS*/
+        	}
+        </style>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="480" height="320"></canvas>
+        
+        <script>
+            var canvas = document.getElementById("myCanvas"); //vytvoření proměnné do které si uložíme odkaz na canvas
+            var ctx = canvas.getContext("2d"); //vytvoření proměnné která bude zastupovat 2D vykreslování pro malování na plátno
+            
+            ctx.beginPath();//začíná vykreslování
+            ctx.rect(20, 40, 50, 50);  //levý horní roh a šířka a výška
+            ctx.fillStyle = "#FF0000"; //barva kterou vyplním obdélník
+            ctx.fill(); //vybarvení obdélníku
+            ctx.closePath();//vykreslování končí
+            
+            
+            ctx.beginPath();//začíná vykreslování
+            ctx.arc(240, 160, 20 , 0, 4, true);  //levý horní roh a šířka a výška
+            ctx.fillStyle = "green"; //barva kterou vyplním kruh
+            ctx.fill(); //vybarvení kruh
+            ctx.closePath();//vykreslování končí
+            
+            
+        
+        </script>
+    </body>
+<html>

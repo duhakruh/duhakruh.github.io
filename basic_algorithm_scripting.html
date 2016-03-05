@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic algorithm scripting</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+        
+        function reverseString(str) {
+            var pole = str.split('');
+            pole.reverse();
+            var vrat = pole.join('');
+            return vrat;
+        }
+        console.log(reverseString("hello"));
+        
+        
+        
+        function factorialize(num) {
+            var vrat = 1;
+            for (var i=1;i<=num;i++)
+            {
+                vrat = vrat * i;
+            }
+            return vrat;
+        }
+        console.log(factorialize(5));
+        
+        
+        </script>
+    </body>
+</html>
